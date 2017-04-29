@@ -1,1 +1,5 @@
-library(tidyverse) # General data manipulation and plotting
+# General data manipulation and plotting
+library(tidyverse)
+
+# Get US maps
+library(albersusa)  # devtools::install_github("hrbrmstr/albersusa")
