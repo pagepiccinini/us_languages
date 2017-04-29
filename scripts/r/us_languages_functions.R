@@ -7,10 +7,9 @@ percnoneng_map = function(data, plot_year) {
     ggtitle(paste0("Year ", plot_year)) +
     # Draw states as polygons with white borders between states
     geom_polygon(color = "white") +
-    # Update legend title
-    #guides(fill = guide_legend("percentage non-English\nlanguage")) +
-    # Change colors
-    #scale_fill_gradientn(colors = rainbow(20)) +
+    # Change legend title and colors
+    scale_fill_distiller("percentage non-English\nlanguage", palette = "PuBu",
+                         direction = 1, limits = c(0, 50)) +
     # Update map projection to match most maps
     coord_map(projection = "polyconic") +
     # Remove axes and background
@@ -25,15 +24,16 @@ top_map = function(data, number, plot_year) {
   data %>%
     filter(ranking == number) %>%
     filter(year == plot_year) %>%
-    ggplot(aes(x = long, y = lat, group = group, fill = language)) +
+    ggplot(aes(x = long, y = lat, group = group, fill = language, alpha = percentage)) +
     # Add title
-    ggtitle(paste0("Top ", number, " Non-English Language for ", plot_year)) +
+    ggtitle(paste0("Top ", number, " Non-English Language for ", plot_year),
+            subtitle = "Darkness function of percentage of speakers") +
     # Draw states as polygons with white borders between states
     geom_polygon(color = "white") +
     # Update legend
     guides(fill = guide_legend(nrow = round(length(unique(levels(data$language))) / 10, 0))) +
-    # Change colors
-    #scale_fill_gradientn(colors = rainbow(20)) +
+    # Set limits for alpha and supress legend
+    scale_alpha(guide = 'none', limits = c(0, 30)) +
     # Update map projection to match most maps
     coord_map(projection = "polyconic") +
     # Remove axes and background
@@ -70,8 +70,9 @@ specificlg_map = function(data, plot_year, specific_language) {
     ggtitle(paste0("Percentage of ", specific_language, " in ", plot_year)) +
     # Draw states as polygons with white borders between states
     geom_polygon(color = "white") +
-    # Change colors
-    #scale_fill_gradientn(colors = rainbow(20)) +
+    # Change legend title and colors
+    scale_fill_distiller(palette = "RdPu",
+                         direction = 1, limits = c(0, 30)) +
     # Update map projection to match most maps
     coord_map(projection = "polyconic") +
     # Remove axes and background
