@@ -20,7 +20,7 @@ percnoneng_map = function(data, plot_year) {
 }
 
 # Make map for top X language
-top_map = function(data, number, plot_year) {
+top_map = function(data, plot_year, number) {
   data %>%
     filter(ranking == number) %>%
     filter(year == plot_year) %>%
@@ -71,8 +71,7 @@ specificlg_map = function(data, plot_year, specific_language) {
     # Draw states as polygons with white borders between states
     geom_polygon(color = "white") +
     # Change legend title and colors
-    scale_fill_distiller(palette = "RdPu",
-                         direction = 1, limits = c(0, 30)) +
+    scale_fill_distiller(palette = "RdPu", direction = 1) +
     # Update map projection to match most maps
     coord_map(projection = "polyconic") +
     # Remove axes and background

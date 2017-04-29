@@ -48,51 +48,51 @@ percnoneng_2013.map
 
 ## MAPS TOP LANGUAGES ####
 # Top 1, Year 2010
-top1_2010.map = top_map(data_states_figs, 1, 2010)
+top1_2010.map = top_map(data_states_figs, 2010, 1)
 top1_2010.map
 
 # Top 1, Year 2011
-top1_2011.map = top_map(data_states_figs, 1, 2011)
+top1_2011.map = top_map(data_states_figs, 2011, 1)
 top1_2011.map
 
 # Top 1, Year 2012
-top1_2012.map = top_map(data_states_figs, 1, 2012)
+top1_2012.map = top_map(data_states_figs, 2012, 1)
 top1_2012.map
 
 # Top 1, Year 2013
-top1_2013.map = top_map(data_states_figs, 1, 2013)
+top1_2013.map = top_map(data_states_figs, 2013, 1)
 top1_2013.map
 
 # Top 2, Year 2010
-top2_2010.map = top_map(data_states_figs, 2, 2010)
+top2_2010.map = top_map(data_states_figs, 2010, 2)
 top2_2010.map
 
 # Top 2, Year 2011
-top2_2011.map = top_map(data_states_figs, 2, 2011)
+top2_2011.map = top_map(data_states_figs, 2011, 2)
 top2_2011.map
 
 # Top 2, Year 2012
-top2_2012.map = top_map(data_states_figs, 2, 2012)
+top2_2012.map = top_map(data_states_figs, 2012, 2)
 top2_2012.map
 
 # Top 2, Year 2013
-top2_2013.map = top_map(data_states_figs, 2, 2013)
+top2_2013.map = top_map(data_states_figs, 2013, 2)
 top2_2013.map
 
 # Top 3, Year 2010
-top3_2010.map = top_map(data_states_figs, 3, 2010)
+top3_2010.map = top_map(data_states_figs, 2010, 3)
 top3_2010.map
 
 # Top 3, Year 2011
-top3_2011.map = top_map(data_states_figs, 3, 2011)
+top3_2011.map = top_map(data_states_figs, 2011, 3)
 top3_2011.map
 
 # Top 3, Year 2012
-top3_2012.map = top_map(data_states_figs, 3, 2012)
+top3_2012.map = top_map(data_states_figs, 2012, 3)
 top3_2012.map
 
 # Top 3, Year 2013
-top3_2013.map = top_map(data_states_figs, 3, 2013)
+top3_2013.map = top_map(data_states_figs, 2013, 3)
 top3_2013.map
 
 
